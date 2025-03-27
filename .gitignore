@@ -1,6 +1,6 @@
 .env
 db_test.py
-_pycache__
+__pycache__
 migrations
 quiz_env
 database.db
