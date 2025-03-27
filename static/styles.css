@@ -1,0 +1,100 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2e;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(90deg, #ff8c00, #ff0080);
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+main {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+form {
+    background: #2a2a3b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form input, form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    background-color: #ff0080;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c00060;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ff8c00;
+    color: rgb(96, 92, 92);
+}
+
+footer {
+    background: #222;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+/**HOME**/
+
+.label {
+	color: white;
+}

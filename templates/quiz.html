@@ -1,0 +1,13 @@
+<!-- quiz.html -->
+{% extends "base.html" %}
+{% block title %}Quiz{% endblock %}
+{% block content %}
+    <p>Punteggio totale: <span id="score">0</span></p>
+    <p id="question">Domanda qui...</p>
+    <form action="" method="POST">
+        <button type="submit" name="answer" value="1">Opzione 1</button>
+        <button type="submit" name="answer" value="2">Opzione 2</button>
+        <button type="submit" name="answer" value="3">Opzione 3</button>
+        <button type="submit" name="answer" value="4">Opzione 4</button>
+    </form>
+{% endblock %}

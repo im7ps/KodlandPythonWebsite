@@ -1,0 +1,20 @@
+<!-- register.html -->
+{% extends "base.html" %}
+{% block title %}Registrazione{% endblock %}
+{% block content %}
+    <form action="{{ url_for('auth.register') }}" method="POST">
+        <label class="label" for="username">Login:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label class="label" for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label class="label" for="confirm_password">Conferma Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <label class="label" for="nickname">Nickname:</label>
+        <input type="text" id="nickname" name="nickname" required>
+		
+        <button type="submit">Registrati</button>
+    </form>
+{% endblock %}
