@@ -40,7 +40,7 @@ main {
 }
 
 form {
-    background: #2a2a3b;
+    background: #aeaec1;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
@@ -97,4 +97,27 @@ footer {
 
 .label {
 	color: white;
+}
+
+
+/**QUIZ**/
+
+.correct {
+	color: green;
+}
+
+.incorrect {
+	color: red;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #f0f0f0;
 }

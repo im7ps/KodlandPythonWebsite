@@ -1,0 +1,110 @@
+{
+	"quiz": [
+	  {
+		"category": "Intelligenza Artificiale",
+		"questions": [
+		  {
+			"question": "Quale libreria Python è più usata per il machine learning?",
+			"options": ["TensorFlow", "Pandas", "Flask", "Django"],
+			"correct_index": 0
+		  },
+		  {
+			"question": "Quale tecnica di apprendimento è usata nei modelli non supervisionati?",
+			"options": ["Regressione", "Clustering", "Classificazione", "Apprendimento per rinforzo"],
+			"correct_index": 1
+		  },
+		  {
+			"question": "Cosa rappresenta un 'neurone' in una rete neurale artificiale?",
+			"options": ["Una cellula biologica", "Un'unità computazionale che elabora dati", "Un framework di deep learning", "Un database di reti neurali"],
+			"correct_index": 1
+		  },
+		  {
+			"question": "Qual è il principale vantaggio delle reti neurali convoluzionali (CNN)?",
+			"options": ["Analizzare dati sequenziali", "Elaborare immagini e dati spaziali", "Eseguire calcoli matematici complessi", "Gestire database relazionali"],
+			"correct_index": 1
+		  }
+		]
+	  },
+	  {
+		"category": "Visione Computerizzata",
+		"questions": [
+		  {
+			"question": "Quale libreria è comunemente usata per la visione artificiale in Python?",
+			"options": ["Scikit-learn", "OpenCV", "NLTK", "Keras"],
+			"correct_index": 1
+		  },
+		  {
+			"question": "Cosa rappresenta un 'feature descriptor' in visione artificiale?",
+			"options": ["Un modello di apprendimento automatico", "Un metodo per descrivere e confrontare caratteristiche di immagini", "Un database di immagini", "Un tipo di architettura neurale"],
+			"correct_index": 1
+		  },
+		  {
+			"question": "Quale tecnica viene usata per segmentare oggetti in un'immagine?",
+			"options": ["Clustering K-Means", "Trasformata di Fourier", "Segmentazione per soglia", "Compressione JPEG"],
+			"correct_index": 2
+		  },
+		  {
+			"question": "Cosa fa un algoritmo di Object Detection?",
+			"options": ["Classifica le immagini", "Trova e identifica oggetti in un'immagine", "Genera immagini da testo", "Ottimizza la qualità delle immagini"],
+			"correct_index": 1
+		  }
+		]
+	  },
+	  {
+		"category": "NLP (Elaborazione del Linguaggio Naturale)",
+		"questions": [
+		  {
+			"question": "Quale libreria è più usata per l'elaborazione del linguaggio naturale?",
+			"options": ["PyTorch", "NLTK", "Matplotlib", "OpenCV"],
+			"correct_index": 1
+		  },
+		  {
+			"question": "Qual è l'obiettivo principale della tokenizzazione in NLP?",
+			"options": ["Dividere il testo in unità più piccole come parole o frasi", "Creare immagini da testi", "Generare dati sintetici", "Compilare codice sorgente"],
+			"correct_index": 0
+		  },
+		  {
+			"question": "Cos'è un word embedding?",
+			"options": ["Un metodo per convertire parole in vettori numerici", "Una tecnica di compressione delle immagini", "Un sistema di riconoscimento vocale", "Un tipo di database per linguaggi naturali"],
+			"correct_index": 0
+		  },
+		  {
+			"question": "Qual è il principale vantaggio di un Transformer rispetto a un RNN?",
+			"options": ["Maggiore capacità di memoria a lungo termine", "Migliore gestione dei dati numerici", "Minore consumo di RAM", "Maggiore velocità di esecuzione con grandi dataset"],
+			"correct_index": 3
+		  }
+		]
+	  },
+	  {
+		"category": "Applicazione di Modelli AI alle Applicazioni Python",
+		"questions": [
+		  {
+			"question": "Quale framework è più usato per sviluppare applicazioni AI in Python?",
+			"options": ["Django", "Flask", "TensorFlow", "Bootstrap"],
+			"correct_index": 2
+		  },
+		  {
+			"question": "Cosa fa un modello AI in una web app?",
+			"options": ["Genera automaticamente codice HTML", "Elabora dati e fornisce previsioni o classificazioni", "Sostituisce il database", "Migliora il design grafico"],
+			"correct_index": 1
+		  },
+		  {
+			"question": "Quale tecnica AI viene spesso usata per i suggerimenti sui siti di e-commerce?",
+			"options": ["Clustering", "Sistemi di raccomandazione", "Segmentazione per soglia", "Reinforcement Learning"],
+			"correct_index": 1
+		  },
+		  {
+			"question": "Quale API viene spesso usata per integrare modelli AI nelle web app?",
+			"options": ["REST API", "WebSocket API", "SOAP API", "GraphQL API"],
+			"correct_index": 0
+		  },
+		  {
+			"question": "Cosa rappresenta un endpoint in un'API per AI?",
+			"options": ["Un'unità di calcolo nei modelli AI", "Un URL che riceve richieste e restituisce risposte", "Una funzione di ottimizzazione di un modello", "Un dataset per addestrare l'AI"],
+			"correct_index": 1
+		  }
+		]
+	  }
+	]
+  }
+  
