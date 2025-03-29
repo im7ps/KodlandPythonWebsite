@@ -2,32 +2,34 @@
 {% extends "base.html" %}
 {% block title %}Registrazione{% endblock %}
 {% block content %}
+	<div class="flex-wrapper registration">
+<!-- 		
+		{% with messages = get_flashed_messages(with_categories=True) %}
+			{% if messages %}
+				<div>
+					{% for category, message in messages %}
+						<div class="alert alert-{{ category }}" role="alert">
+							{{ message }}
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		{% endwith %} -->
 
-	{% with messages = get_flashed_messages(with_categories=True) %}
-		{% if messages %}
-			<div>
-				{% for category, message in messages %}
-					<div class="alert alert-{{ category }}" role="alert">
-						{{ message }}
-					</div>
-				{% endfor %}
-			</div>
-		{% endif %}
-	{% endwith %}
+		<form action="{{ url_for('auth.registration') }}" method="POST">
+			<label class="label" for="username">Login:</label>
+			<input type="text" id="username" name="username" required>
 
-    <form action="{{ url_for('auth.registration') }}" method="POST">
-        <label class="label" for="username">Login:</label>
-        <input type="text" id="username" name="username" required>
+			<label class="label" for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
 
-        <label class="label" for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+			<label class="label" for="confirm_password">Conferma Password:</label>
+			<input type="password" id="confirm_password" name="confirm_password" required>
 
-        <label class="label" for="confirm_password">Conferma Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
+			<label class="label" for="nickname">Nickname:</label>
+			<input type="text" id="nickname" name="nickname" required>
 
-        <label class="label" for="nickname">Nickname:</label>
-        <input type="text" id="nickname" name="nickname" required>
-
-        <button type="submit">Registrati</button>
-    </form>
+			<button type="submit">Registrati</button>
+		</form>
+	</div>
 {% endblock %}

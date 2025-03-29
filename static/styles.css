@@ -1,11 +1,64 @@
 /* styles.css */
 
+:root {
+    --bs-body-bg: blueviolet; /* Sovrascrive il valore di Bootstrap */
+}
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
 body {
-    font-family: 'Arial', sans-serif;
+	font-family: 'Arial', sans-serif;
     background-color: #1e1e2e;
     color: #ffffff;
     text-align: center;
+	
 }
+
+/* Wrapper principale per il layout */
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assicura che il contenuto occupi almeno l'altezza della viewport */
+}
+
+/* Header e footer con altezza fissa */
+header, footer {
+    flex-shrink: 0; /* Impedisce che si ridimensionino */
+}
+
+/* Main si espande per occupare lo spazio disponibile */
+main {
+	padding: 20px;
+    margin-top: 20px;
+    flex-grow: 1; /* Permette al main di occupare lo spazio rimanente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente il contenuto */
+    align-items: center; /* Centra orizzontalmente il contenuto */
+}
+
+
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+
+
 
 header {
     background: linear-gradient(90deg, #ff8c00, #ff0080);
@@ -34,10 +87,6 @@ nav a:hover {
     background-color: #0056b3;
 }
 
-main {
-    padding: 20px;
-    margin-top: 20px;
-}
 
 form {
     background: #aeaec1;
@@ -119,5 +168,24 @@ button {
 }
 
 button:hover {
-    background-color: #f0f0f0;
+    background-color: #878787;
+}
+
+.inactive {
+	display: none;
+}
+
+.quizScore {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8c00;
+    margin-top: 20px;
+}
+
+/* Stile per il suggerimento */
+.quizHint {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #007bff;
+    margin-top: 10px;
 }

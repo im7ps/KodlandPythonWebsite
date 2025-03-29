@@ -2,18 +2,20 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-    <form action="" method="POST">
-        <label class="label" for="city">Inserisci il nome della città:</label>
-        <input type="text" id="city" name="city" required>
-        <button type="submit">Cerca</button>
-    </form>
-    <table>
-        <tr>
-            <th>Giorno</th>
-            <th>Data</th>
-            <th>Temperatura Giorno</th>
-            <th>Temperatura Notte</th>
-        </tr>
-        <!-- Qui andranno i dati delle previsioni meteo -->
-    </table>
+	<div class="flex-wrapper">
+		<form action="" method="POST">
+			<label class="label" for="city">Inserisci il nome della città:</label>
+			<input type="text" id="city" name="city" required>
+			<button type="submit">Cerca</button>
+		</form>
+		<table>
+			<tr>
+				<th>Giorno</th>
+				<th>Data</th>
+				<th>Temperatura Giorno</th>
+				<th>Temperatura Notte</th>
+			</tr>
+			<!-- Qui andranno i dati delle previsioni meteo -->
+		</table>
+	</div>
 {% endblock %}

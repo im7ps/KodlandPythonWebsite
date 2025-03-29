@@ -2,9 +2,17 @@
 {% block title %}Quiz{% endblock %}
 
 {% block content %}
-    <h1>Quiz</h1>
-        <div class="question-block">
-			<form method="POST">
+	<div class="flex-wrapper">
+		<h1>Quiz</h1>
+		<div class="question-block">
+			<form
+				method="POST"
+				class="quizForm 
+						{% if final_score is none %} 
+							active
+						{% else %} 
+							inactive
+						{% endif %}">
 				<p><strong>{{ question }}</strong></p>
 				<ul>
 					{% for option in options %}
@@ -12,20 +20,25 @@
 						<button 
 							type="submit"
 							name="answer"
-							value="{{ option.index }}"
-							class="{% if user_answer is not none %} 
-										{% if option.index == correct_index %}correct{% elif option.index == user_answer %}incorrect{% endif %}
-									{% endif %}">
+							value="{{ option.index }}">
 							{{ option.text }}						
 						</button>
 					</li>
 					{% endfor %}
 				</ul>
 			</form>
-			<p>{{ correct_index }}</p>
-			<form method="POST">
-				<button type="submit" name="next_question" value="1" class="next-btn">➡️</button>
-			</form>
-			
-        </div>
+			<p class="quizScore
+						{% if final_score is not none %} 
+							active
+						{% else %} 
+							inactive
+						{% endif %}">
+				Final score: {{ final_score }}
+
+			</p>	
+			<p class="quizHint">
+				Hint: {{ correct_index }}
+			</p>
+		</div>
+	</div>
 {% endblock %}

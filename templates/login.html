@@ -2,11 +2,13 @@
 {% extends "base.html" %}
 {% block title %}Login{% endblock %}
 {% block content %}
-    <form action="{{ url_for('auth.login') }}" method="POST">
-        <label class="label" for="username">Login:</label>
-        <input type="text" id="username" name="username" required>
-        <label class="label" for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Accedi</button>
-    </form>
+	<div class="flex-wrapper">
+		<form action="{{ url_for('auth.login') }}" method="POST">
+			<label class="label" for="username">Login:</label>
+			<input type="text" id="username" name="username" required>
+			<label class="label" for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			<button type="submit">Accedi</button>
+		</form>
+	</div>
 {% endblock %}
