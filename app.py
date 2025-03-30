@@ -6,8 +6,8 @@ from .py_scripts.auth import auth
 from flask_migrate import Migrate
 from .py_scripts.quiz import quiz_bp
 
+app = Flask(__name__)
 def create_app():
-	app = Flask(__name__)
 	app.config.from_object(Config)
  
 	db.init_app(app)
