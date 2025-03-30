@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Leaderboard{% endblock %}
+{% block content %}
+    <div class="flex-wrapper">
+        <h1 class="main-title">
+            <i class="fas fa-trophy"></i> Leaderboard
+        </h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Nickname</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in leaderboard_data %}
+                <tr>
+                    <td>{{ entry.rank }}</td>
+                    <td>{{ entry.nickname }}</td>
+                    <td>{{ entry.score }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

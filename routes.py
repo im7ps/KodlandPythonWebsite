@@ -25,8 +25,22 @@ def registration():
 
 @routes.route('/login')
 def login():
-    
 	return render_template('login.html')
+
+
+@routes.route('/leaderboard')
+def leaderboard():
+    # Recupera i punteggi ordinati dal più alto al più basso
+    scores = db.session.query(Score, User).join(User, Score.user_id == User.id).order_by(Score.score.desc()).all()
+    
+    # Prepara i dati con il rank
+    leaderboard_data = [
+        {"rank": rank + 1, "nickname": user.nickname, "score": score.score}
+        for rank, (score, user) in enumerate(scores)
+    ]
+    
+    return render_template('leaderboard.html', leaderboard_data=leaderboard_data)
+
 
 
 @routes.route('/quiz', methods=['GET', 'POST'])
@@ -67,7 +81,6 @@ def quiz():
 		session['user_answer'] = user_answer
 		
 		if session['user_answer'] == session['correct_index']:
-			session['score'] += 1
 
 			username = session.get('user')
 			# print(f"Username: {username}")
@@ -79,6 +92,7 @@ def quiz():
 				if score_entry:
 					# print(f"Current score entry: {score_entry}")
 					score_entry.score += 1
+					session['score'] = score_entry.score
 					# print(f"Current score: {score_entry.score}")
 					db.session.add(score_entry)
 					db.session.commit()
@@ -96,5 +110,5 @@ def quiz():
 		question=session['question'],
 		options=session['options'],
 		correct_index=session['correct_index'],
-		# final_score=session['final_score'],
+		total_score=session['score'],
 	)
