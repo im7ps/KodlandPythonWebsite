@@ -3,6 +3,9 @@
 {% block title %}Login{% endblock %}
 {% block content %}
 	<div class="flex-wrapper">
+		<h1 class="main-title">
+        	<i class="fas fa-sign-in-alt"></i> Login
+		</h1>
 		<form action="{{ url_for('auth.login') }}" method="POST">
 			<label class="label" for="username">Login:</label>
 			<input type="text" id="username" name="username" required>

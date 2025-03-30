@@ -1,21 +1,37 @@
-<!-- home.html -->
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-	<div class="flex-wrapper">
-		<form action="" method="POST">
-			<label class="label" for="city">Inserisci il nome della città:</label>
-			<input type="text" id="city" name="city" required>
-			<button type="submit">Cerca</button>
-		</form>
-		<table>
-			<tr>
-				<th>Giorno</th>
-				<th>Data</th>
-				<th>Temperatura Giorno</th>
-				<th>Temperatura Notte</th>
-			</tr>
-			<!-- Qui andranno i dati delle previsioni meteo -->
-		</table>
-	</div>
+    <div class="flex-wrapper">
+		<h1 class="main-title">
+        	<i class="fas fa-cloud-rain"></i> Weather Report <i class="fas fa-globe"></i>
+		</h1>
+		
+        <form action="/" method="POST">
+            <label class="label" for="city">Search by city:</label>
+            <input type="text" id="city" name="city" required>
+            <button type="submit">Cerca</button>
+        </form>
+
+        {% if city %}
+            <h2>Weather Forecast for: {{ city }}</h2>
+            {% if forecasts %}
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day (°C)</th>
+                        <th>Night (°C)</th>
+                    </tr>
+                    {% for forecast in forecasts %}
+                    <tr>
+                        <td>{{ forecast.date }}</td>
+                        <td>{{ forecast.temp_max }}</td>
+                        <td>{{ forecast.temp_min }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>Impossible to obtain data for current city, please try again.</p>
+            {% endif %}
+        {% endif %}
+    </div>
 {% endblock %}

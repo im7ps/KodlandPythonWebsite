@@ -3,6 +3,27 @@
 {% block title %}Registrazione{% endblock %}
 {% block content %}
 	<div class="flex-wrapper registration">
+		<h1 class="main-title">
+        	<i class="fas fa-user-plus"></i> Registration
+		</h1>
+		
+		<form action="{{ url_for('auth.registration') }}" method="POST">
+			<label class="label" for="username">Login:</label>
+			<input type="text" id="username" name="username" required>
+			
+			<label class="label" for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			
+			<label class="label" for="confirm_password">Conferma Password:</label>
+			<input type="password" id="confirm_password" name="confirm_password" required>
+			
+			<label class="label" for="nickname">Nickname:</label>
+			<input type="text" id="nickname" name="nickname" required>
+			
+			<button type="submit">Registrati</button>
+		</form>
+	</div>
+	{% endblock %}
 <!-- 		
 		{% with messages = get_flashed_messages(with_categories=True) %}
 			{% if messages %}
@@ -15,21 +36,3 @@
 				</div>
 			{% endif %}
 		{% endwith %} -->
-
-		<form action="{{ url_for('auth.registration') }}" method="POST">
-			<label class="label" for="username">Login:</label>
-			<input type="text" id="username" name="username" required>
-
-			<label class="label" for="password">Password:</label>
-			<input type="password" id="password" name="password" required>
-
-			<label class="label" for="confirm_password">Conferma Password:</label>
-			<input type="password" id="confirm_password" name="confirm_password" required>
-
-			<label class="label" for="nickname">Nickname:</label>
-			<input type="text" id="nickname" name="nickname" required>
-
-			<button type="submit">Registrati</button>
-		</form>
-	</div>
-{% endblock %}

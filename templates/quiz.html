@@ -3,16 +3,13 @@
 
 {% block content %}
 	<div class="flex-wrapper">
-		<h1>Quiz</h1>
+		<h1 class="main-title">
+        	<i class="fas fa-question-circle"></i> Quiz
+		</h1>
 		<div class="question-block">
 			<form
 				method="POST"
-				class="quizForm 
-						{% if final_score is none %} 
-							active
-						{% else %} 
-							inactive
-						{% endif %}">
+				class="quizForm">
 				<p><strong>{{ question }}</strong></p>
 				<ul>
 					{% for option in options %}
@@ -27,15 +24,6 @@
 					{% endfor %}
 				</ul>
 			</form>
-			<p class="quizScore
-						{% if final_score is not none %} 
-							active
-						{% else %} 
-							inactive
-						{% endif %}">
-				Final score: {{ final_score }}
-
-			</p>	
 			<p class="quizHint">
 				Hint: {{ correct_index }}
 			</p>

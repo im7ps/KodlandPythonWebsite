@@ -148,6 +148,17 @@ footer {
 	color: white;
 }
 
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff8c00, #ff0080);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 /**QUIZ**/
 
