@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request, session
 
-from .quiz import load_question
-from .weather import get_weather
-from .models import User, Score, db
+from py_scripts.quiz import load_question
+from py_scripts.weather import get_weather
+from py_scripts.models import User, Score, db
 
 
 routes = Blueprint('routes', __name__)

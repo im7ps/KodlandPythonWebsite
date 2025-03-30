@@ -1,10 +1,10 @@
 from flask import Flask
-from .py_scripts.config import Config
-from .py_scripts.routes import routes
-from .py_scripts.models import db
-from .py_scripts.auth import auth
+from py_scripts.config import Config
+from py_scripts.routes import routes
+from py_scripts.models import db
+from py_scripts.auth import auth
 from flask_migrate import Migrate
-from .py_scripts.quiz import quiz_bp
+from py_scripts.quiz import quiz_bp
 
 app = Flask(__name__)
 def create_app():
