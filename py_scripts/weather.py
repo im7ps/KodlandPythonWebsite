@@ -1,8 +1,9 @@
 import requests
 from datetime import datetime
+import os
 
 def get_weather(city):
-	API_KEY = "0c9d4006a5af8dcf2c7097fdb534f5ac"
+	API_KEY = os.getenv("API_KEY", "default_api_key")
 	BASE_URL = "https://api.openweathermap.org/data/2.5/forecast"
 	params = {
 		"q": city,
@@ -20,7 +21,6 @@ def get_weather(city):
 			date_str = forecast['dt_txt']
 			date_obj = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
 			day_name = date_obj.strftime("%A")
-			print(forecast['dt_txt'])
 			forecasts.append({
 				"date": forecast["dt_txt"].split()[0] + ' - ' + day_name,
 				"temp_max": forecast["main"]["temp_max"],

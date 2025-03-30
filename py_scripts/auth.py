@@ -18,7 +18,6 @@ def registration():
             return redirect(url_for('auth.registration'))
         
         existing_user = User.query.filter_by(username=username).first()
-        print(existing_user)
         if existing_user:
             print('registration failed by username')
             return redirect(url_for('auth.registration'))

@@ -1,10 +1,10 @@
 from flask import Flask
-from .config import Config
-from .routes import routes
-from .models import db
-from .auth import auth
+from .py_scripts.config import Config
+from .py_scripts.routes import routes
+from .py_scripts.models import db
+from .py_scripts.auth import auth
 from flask_migrate import Migrate
-from .quiz import quiz_bp
+from .py_scripts.quiz import quiz_bp
 
 def create_app():
 	app = Flask(__name__)
@@ -19,6 +19,7 @@ def create_app():
 	app.register_blueprint(quiz_bp)
 
 	with app.app_context():
+		# use this only if you want to recrete the db for every run
 		# db.drop_all()
 		db.create_all()
 

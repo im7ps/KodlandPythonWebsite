@@ -4,7 +4,6 @@ import random
 
 
 def load_question():
-	"""Carica le domande dal file JSON."""
 	with open("quiz.json", "r", encoding="utf-8") as file:
 		data = json.load(file)
 		questions = []
@@ -15,9 +14,7 @@ def load_question():
 		options = question_data['options']
 		correct_index = question_data['correct_index']
 
-		# print(correct_index)
 		correct_option = options[correct_index]
-		# print(correct_option)
 
 		random.shuffle(options)
 
@@ -31,8 +28,6 @@ def load_question():
 			if correct_option == option:
 				correct_index = index
     
-		# print(options[correct_index])
-
 		return question, options_data, correct_index
 
 quiz_bp = Blueprint("quiz", __name__)
