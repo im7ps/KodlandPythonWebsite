@@ -5,6 +5,8 @@ from py_scripts.models import db
 from py_scripts.auth import auth
 from flask_migrate import Migrate
 from py_scripts.quiz import quiz_bp
+from dotenv import load_dotenv
+
 
 app = Flask(__name__)
 def create_app():
@@ -27,5 +29,6 @@ def create_app():
 
 
 if __name__ == "__main__":
+	load_dotenv()
 	app = create_app()
 	app.run(debug=True)
