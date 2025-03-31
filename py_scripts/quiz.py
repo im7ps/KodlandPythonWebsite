@@ -4,7 +4,7 @@ import random
 
 
 def load_question():
-	with open("quiz.json", "r", encoding="utf-8") as file:
+	with open("/home/stepis/kodland/quiz_app/quiz.json", "r", encoding="utf-8") as file:
 		data = json.load(file)
 		questions = []
 		for category in data["quiz"]:
