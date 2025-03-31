@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def get_weather(city):
-	API_KEY = os.getenv("API_KEY", "default_api_key")
+	API_KEY = "0c9d4006a5af8dcf2c7097fdb534f5ac"
 	BASE_URL = "https://api.openweathermap.org/data/2.5/forecast"
 	params = {
 		"q": city,
